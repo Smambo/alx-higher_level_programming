@@ -6,7 +6,7 @@ Using the provided source code, write a program that will print whether the numb
 Using the provided source code, write a program that will print the last digit of the number stored in the variable number.
 ### 2-print_alphabet.py
 Write a program that prints the ASCII alphabet, in lowercase, not followed by a newline.
-### 3-print_alphabet.py
+### 3-print_alphabt.py
 Write a program that prints the ASCII alphabet, in lowercase, not followed by a newline.
 ### 4-print_hexa.py
 Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal form.
