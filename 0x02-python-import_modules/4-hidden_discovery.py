@@ -4,4 +4,4 @@ if __name__ == "__main__":
     names = dir(hidden)
     for i in range(len(names)):
         if names[i][0] != '_':
-            print (names[i])
+            print(names[i])
