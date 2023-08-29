@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-class Square():
+class Square:
     """Defining an empty square class."""
-    # Empty block
-    pass
+    pass  # An empty block
