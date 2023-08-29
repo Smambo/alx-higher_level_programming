@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Module docstring."""
+
+
 class Square:
-    """
-    creates a square class object
-    """
+    """Creates a square class object."""
     def __init__(self, size):
         self.__size = size
         """
