@@ -5,3 +5,8 @@ class Square:
     """
     def __init__(self, size):
         self.__size = size
+        """
+        instantiates square object with parameter
+        Args:
+            __size(int): size of square
+        """
