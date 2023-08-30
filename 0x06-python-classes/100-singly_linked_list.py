@@ -33,6 +33,7 @@ class Node:
             raise (TypeError("next_node must be a Node object"))
         self.__next_node = value
 
+
 class SinglyLinkedList:
     """Creates a singly linked list class object"""
     __head = None
