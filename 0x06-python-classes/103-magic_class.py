@@ -21,6 +21,7 @@ class MagicClass:
         """Retrieves the circumference"""
         return (2 * math.pi * self._MagicClass__radius)
 
+
 if __name__ == "__main__":
     import dis
     dis.dis(MagicClass)
