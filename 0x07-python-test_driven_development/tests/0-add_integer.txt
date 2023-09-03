@@ -1,0 +1,60 @@
+# 0-add_integer.txt
+===========================
+How to use 0-add_integer.py
+===========================
+
+This is test file for the function called ``add_integer()``
+
+Numerical values
+===========================
+
+``add_integer()`` returns an integer which is the addition of its arguments
+using the ``+`` operator.
+
+::
+    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer(1, 6)
+    7
+
+Floating-point values are also supported.
+
+::
+    >>> add_integer(1.0, 3.0)
+    4
+
+An exception will be thrown if the argument ``a`` is not included.
+If a value for argument ``b`` is not specified, it will default to the value ``98``.
+
+::
+    >>> add_integer(0)
+    98
+    >>> add_integer(3.0,)
+    101
+    >>> add_integer(100.3, -4.3)
+    96
+
+Non-numerical values
+==========================
+
+These types of values should throw TypeError exception messages.
+
+::
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer('a', 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, ['a', 'b', 'c'])
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
