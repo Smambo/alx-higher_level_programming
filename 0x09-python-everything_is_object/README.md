@@ -142,22 +142,22 @@ Write a function `def copy_list(l):` that returns a *copy* of a list.
 * Your file should be maximum 3-line long (no documentation needed)
 * You are not allowed to import any module
 ### 20. Tuple or not?
-Is a a tuple? Answer with Yes or No.
+Is `a` a tuple? Answer with `Yes` or `No`.
 ```
 a = ()
 ```
 ### 21. Tuple or not?
-Is a a tuple? Answer with Yes or No.
+Is `a` a tuple? Answer with `Yes` or `No`.
 ```
 a = (1, 2)
 ```
 ### 22. Tuple or not?
-Is a a tuple? Answer with Yes or No.
+Is `a` a tuple? Answer with `Yes` or `No`.
 ```
 a = (1)
 ```
 ### 23. Tuple or not?
-Is a a tuple? Answer with Yes or No.
+Is `a` a tuple? Answer with `Yes` or `No`.
 ```
 a = (1, )
 ```
@@ -183,7 +183,7 @@ b = ()
 a is b
 ```
 ### 27. Still the same?
-Will the last line of this script print 139926795932424? Answer with Yes or No
+Will the last line of this script print `139926795932424`? Answer with `Yes` or `No`
 ```
 >>> id(a)
 139926795932424
@@ -193,7 +193,7 @@ Will the last line of this script print 139926795932424? Answer with Yes or No
 >>> id(a)
 ```
 ### 28. Same or not?
-Will the last line of this script print 139926795932424? Answer with Yes or No
+Will the last line of this script print `139926795932424`? Answer with `Yes` or `No`
 ```
 >>> a
 [1, 2, 3]
