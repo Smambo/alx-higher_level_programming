@@ -18,7 +18,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, 0)
 
     def test_four(self):
-        matrix4 = {0: 'a', 1: 'b', 2: 'c'}
+        matrix4 = {5: 'a', 4: 'b', 3: 'c'}
         self.assertRaises(KeyError, max_integer, matrix4)
 
     def test_five(self):
