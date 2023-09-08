@@ -29,6 +29,18 @@ class TestMaxInteger(unittest.TestCase):
         matrix6 = 'hello'
         self.assertEqual(max_integer(matrix6), 'o')
 
+    def test_seven(self):
+        matrix7 = [-10, 1, 2, 3, 4]
+        self.assertEqual(max_integer(matrix7), 4)
+
+    def test_eight(self):
+        matrix8 = [3]
+        self.assertEqual(max_integer(matrix8), 3)
+
+    def test_nine(self):
+        matrix9 = [5, 1, 2, 3, 4]
+        self.assertEqual(max_integer(matrix9), 5)
+
 
 if __name__ == "__main__":
     unittest.main()
