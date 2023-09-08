@@ -1,0 +1,55 @@
+#3-say_my_name.txt
+============================
+How to use 3-say_my_name.txt
+============================
+
+This is a test file for the function called `say_my_name()`
+
+String values
+===========================
+
+`say_my_name()` prints "My name is <first_name> <last_name>".
+The function takes takes two arguments: `first_name` and `last_name=""`
+Both need to be strings. The second argument is initialised as an empty string,
+meaning that if the function only receives 1 string as an argument, that string will
+be considered as the `first_name` argument and will be printed.
+If the first argument is an empty string and the second is a non-empty string,
+the function will print the non-empty string.
+
+::
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+	>>> say_my_name("Firstname", "Lastname")
+	My name is Firstname Lastname
+
+	>>> say_my_name("Firstname")
+	My name is Firstname
+
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+
+	>>> say_my_name("", "ghost")
+	My name is  ghost
+
+Non-string values
+===========================
+
+If the argument type is anything other than a string, and exception error will be thrown:
+
+::
+	>>> say_my_name(101, "Dalmations")
+	Traceback (most recent call last):
+  	File "<stdin>", line 1, in <module>
+  	File "<stdin>", line 3, in say_my_name
+	TypeError: first_name must be a string
+
+	>>> say_my_name("Ben", 10)
+	Traceback (most recent call last):
+  	File "<stdin>", line 1, in <module>
+  	File "<stdin>", line 5, in say_my_name
+	TypeError: last_name must be a string
+
+	>>> say_my_name()
+	Traceback (most recent call last):
+  	File "<stdin>", line 1, in <module>
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
