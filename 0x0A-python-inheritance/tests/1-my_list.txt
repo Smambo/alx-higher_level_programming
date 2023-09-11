@@ -1,0 +1,36 @@
+# 1-my_list.txt
+=======================
+How to use 1-my_list.py
+=======================
+
+This is a test file for the use of the `MyList` class
+
+=======================
+Integer values
+=======================
+
+The class inherits values from `list` and prints out
+the list in ascending order. The assumption is that
+all elements of the list will be of type `int`
+
+::
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+	>>> my_list.append(2)
+	>>> my_list.print_sorted()
+	[2]
+	>>> my_list.append(10)
+	>>> my_list.print_sorted()
+	[2, 10]
+	>>> my_list.append(-2)
+	>>> my_list.print_sorted()
+	[-2, 2, 10]
+	>>> my_list.append(0)
+	>>> my_list.print_sorted()
+	[-2, 0, 2, 10]
+	>>> my_list.append()
+	Traceback (most recent call last):
+  	File "<stdin>", line 1, in <module>
+	TypeError: list.append() takes exactly one argument (0 given)
