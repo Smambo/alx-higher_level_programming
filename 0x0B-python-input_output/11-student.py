@@ -14,8 +14,8 @@ class Student:
 
     def to_json(self, attrs=None):
         """Retrieves dict representation."""
-        if attrs and isinstance(attrs, list) and
-        all(isinstance(x, str) for x in attrs):
+        if (attrs and isinstance(attrs, list) and
+           all(isinstance(x, str) for x in attrs)):
             return ({x: y for x, y in self.__dict__.items() for x in attrs})
         else:
             return (self.__dict__)
