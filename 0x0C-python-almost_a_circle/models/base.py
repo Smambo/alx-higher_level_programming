@@ -41,10 +41,25 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """."""
+        """
+        Writes json string representation of list to a file.
+        """
         try:
             json_str = cls.to_json_string([x.to_dictionary() for x in list_objs])
         except:
             json_str = '[]'
         with open(cls.__name__+'.json', 'w', encoding="utf-8") as f:
             f.write(json_str)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns instance with all attributes already set.
+        """
+        if cls.__name__ == "Square":
+            new = cls(1)
+        if cls.__name__ == "Rectangle":
+            new = cls(1, 1)
+        if new:
+            new.update(**dictionary)
+            return new
