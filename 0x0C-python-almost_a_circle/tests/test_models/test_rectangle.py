@@ -12,7 +12,7 @@ class TestRectangle(unittest.TestCase):
     """Tests for rectangle case."""
     def test_pep8(self):
         style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['models/base.py', 'models/rectangle.py'])
+        p = style.check_files(['models/base.py', 'models/rectangle.py', 'models/square.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_id(self):

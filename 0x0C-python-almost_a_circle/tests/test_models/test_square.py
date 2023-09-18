@@ -17,7 +17,7 @@ class TestSquare(unittest.TestCase):
         for func in dir(Rectangle):
             self.assertTrue(len(func.__doc__) > 0)
         for func in dir(Square):
-            self.assertTrue(len(fucn.__doc__) > 0)
+            self.assertTrue(len(func.__doc__) > 0)
 
     def test_id(self):
         """Tests id."""
