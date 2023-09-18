@@ -23,6 +23,15 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(name))
         if (name == "x" or name == "y") and value < 0:
             raise ValueError("{} must be >= 0".format(name))
+    
+    def update(self, *args):
+        """Assigns argument to each attribute."""
+        if args:
+            i = 0
+            keys = ['id', 'width', 'height', 'x', 'y']
+            for arg in args:
+                setattr(self, keys[i], arg)
+                i += 1
 
     @property
     def width(self):
@@ -71,3 +80,18 @@ class Rectangle(Base):
     def area(self):
         """Returns rectangle area."""
         return (self.width * self.height)
+
+    def display(self):
+        """
+        Prints rectangle to stdout
+        using '#'.
+        """
+        print('\n' * self.y, end="")
+        print(''.join(' ' * self.x + '#' * self.width + '\n'
+              for times in range(self.height)), end="")
+
+    def __str__(self):
+        """Modifies str obj."""
+        return ("[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id, self.x,
+            self.y, self.width, self.height))
