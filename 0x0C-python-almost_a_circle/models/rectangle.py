@@ -23,7 +23,7 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(name))
         if (name == "x" or name == "y") and value < 0:
             raise ValueError("{} must be >= 0".format(name))
-    
+
     def update(self, *args, **kwargs):
         """Assigns argument to each attribute."""
         if args:
@@ -36,6 +36,17 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns dict representation of Rectangle."""
+        my_dict = {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+        }
+        return my_dict
 
     @property
     def width(self):
