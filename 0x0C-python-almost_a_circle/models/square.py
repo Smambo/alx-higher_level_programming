@@ -26,3 +26,15 @@ class Square(Rectangle):
         """Modifies the str object."""
         return ("[{}] ({}) {}/{} - {}".format(type(self).__name__,
                 self.id, self.x, self.y, self.size))
+
+    def update(self, *args, **kwargs):
+        """Assigns attributes."""
+        if args:
+            i = 0
+            keys = ['id', 'size', 'x', 'y']
+            for arg in args:
+                setattr(self, keys[i], arg)
+                i += 1
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
