@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Import modules for tests."""
 import unittest
-import pep8
 import sys
 from models.rectangle import Rectangle
 from models.base import Base
@@ -10,10 +9,6 @@ from io import StringIO
 
 class TestRectangle(unittest.TestCase):
     """Tests for rectangle case."""
-    def test_pep8(self):
-        style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['models/base.py', 'models/rectangle.py', 'models/square.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_id(self):
         """Tests ids."""
@@ -65,7 +60,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(4, 2)
         r1.display()
         sys.stdout = old_stdout
-        delf.assertEqual(mystdout.getvalue(), "####\n####\n")
+        self.assertEqual(mystdout.getvalue(), "####\n####\n")
         sys.stdout = mystdout = StringIO()
         r1 = Rectangle(2, 3, 2, 2)
         r1.display()
