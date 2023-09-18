@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Import modules."""
 import json
+import os.path
 
 
 """
@@ -63,3 +64,15 @@ class Base:
         if new:
             new.update(**dictionary)
             return new
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns list of instances.
+        """
+        if not os.path.isfile(cls.__name__ + '.json'):
+            return ([])
+        else:
+            with open(cls.__name__ + '.json', 'r', encoding="utf-8") as f:
+                dict_list = cls.from_json_string(f.read())
+            return ([cls.create(**dic) for dic in dict_list])
