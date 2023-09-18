@@ -24,7 +24,7 @@ class Rectangle(Base):
         if (name == "x" or name == "y") and value < 0:
             raise ValueError("{} must be >= 0".format(name))
     
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns argument to each attribute."""
         if args:
             i = 0
@@ -32,6 +32,10 @@ class Rectangle(Base):
             for arg in args:
                 setattr(self, keys[i], arg)
                 i += 1
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     @property
     def width(self):
