@@ -182,7 +182,10 @@ Write a script that displays the number of records with `id = 89` in the table `
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 8-count_89.sql | mysql -hlocalhost -uroot -p hbtn_0c_0 | tail -1
+Enter password: 
+3
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [9. Full creation](./9-full_creation.sql)
 Write a script that creates a table `second_table` in the database `hbtn_0c_0` in your MySQL server and add multiples rows.
@@ -200,7 +203,9 @@ Write a script that creates a table `second_table` in the database `hbtn_0c_0` i
   * `id` = 4, `name` = “George”, `score` = 8
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 9-full_creation.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# 
 ```
 ### [10. List by best](./10-top_score.sql)
 Write a script that lists all records of the table `second_table` of the database `hbtn_0c_0` in your MySQL server.
@@ -209,7 +214,14 @@ Write a script that lists all records of the table `second_table` of the databas
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+score	name
+14	Bob
+10	John
+8	George
+3	Alex
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [11. Select the best](./11-best_score.sql)
 Write a script that lists all records with a `score >= 10` in the table `second_table` of the database `hbtn_0c_0` in your MySQL server.
@@ -218,7 +230,12 @@ Write a script that lists all records with a `score >= 10` in the table `second_
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 11-best_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+score	name
+14	Bob
+10	John
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [12. Cheating is bad](./12-no_cheating.sql)
 Write a script that updates the score of Bob to `10` in the table `second_table`.
@@ -226,14 +243,31 @@ Write a script that updates the score of Bob to `10` in the table `second_table`
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+score	name
+10	John
+10	Bob
+8	George
+3	Alex
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [13. Score too low](./13-change_class.sql)
 Write a script that removes all records with a `score <= 5` in the table `second_table` of the database `hbtn_0c_0` in your MySQL server.
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 13-change_class.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+score	name
+10	John
+10	Bob
+8	George
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [14. Average](./14-average.sql)
 Write a script that computes the score average of all records in the table `second_table` of the database `hbtn_0c_0` in your MySQL server.
@@ -241,7 +275,11 @@ Write a script that computes the score average of all records in the table `seco
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 14-average.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+average
+9.3333
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 
 ### [15. Number by score](./15-groups.sql)
