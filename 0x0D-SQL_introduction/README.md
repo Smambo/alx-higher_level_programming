@@ -8,7 +8,14 @@ Storing data in your application (in memory) has the obvious shortcoming that, w
 ### [0. List a database](./0-list_databases.sql)
 Write a script that lists all databases of your MySQL server
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 0-list_databases.sql | mysql -uroot -p
+Enter password: 
+Database
+information_schema
+mysql
+performance_schema
+sys
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [1. Create a database](./1-create_database_if_missing.sql)
 Write a script that creates the database `hbtn_0c_0` in your MySQL server.
