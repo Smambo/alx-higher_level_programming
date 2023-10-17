@@ -68,7 +68,47 @@ Write a script that lists all the tables of a database in your MySQL server.
 * The database name will be passed as argument of `mysql` command (in the following example: `mysql` is the name of the database)
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 3-list_tables.sql | mysql -hlocalhost -uroot -p mysql
+Enter password: 
+Tables_in_mysql
+columns_priv
+component
+db
+default_roles
+engine_cost
+func
+general_log
+global_grants
+gtid_executed
+help_category
+help_keyword
+help_relation
+help_topic
+innodb_index_stats
+innodb_table_stats
+password_history
+plugin
+procs_priv
+proxies_priv
+replication_asynchronous_connection_failover
+replication_asynchronous_connection_failover_managed
+replication_group_configuration_version
+replication_group_member_actions
+role_edges
+server_cost
+servers
+slave_master_info
+slave_relay_log_info
+slave_worker_info
+slow_log
+tables_priv
+time_zone
+time_zone_leap_second
+time_zone_name
+time_zone_transition
+time_zone_transition_type
+user
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 
 ### [4. First table](./4-first_table.sql)
@@ -81,7 +121,13 @@ Write a script that creates a table called `first_table` in the current database
 * You are not allowed to use the `SELECT` or `SHOW` statements
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 4-first_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 3-list_tables.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+Tables_in_hbtn_0c_0
+first_table
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [5. Full description](./5-full_table.sql)
 Write a script that prints the full description of the table` first_table` from the database `hbtn_0c_0` in your MySQL server.
@@ -89,7 +135,11 @@ Write a script that prints the full description of the table` first_table` from 
 * You are not allowed to use the `DESCRIBE` or `EXPLAIN` statements
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 5-full_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+Table	Create Table
+first_table	CREATE TABLE `first_table` (\n  `id` int DEFAULT NULL,\n  `name` varchar(256) DEFAULT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [6. List all in table](./6-list_values.sql)
 Write a script that lists all rows of the table `first_table` from the database `hbtn_0c_0` in your MySQL server.
@@ -97,7 +147,9 @@ Write a script that lists all rows of the table `first_table` from the database 
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 6-list_values.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [7. First add](./7-insert_value.sql)
 Write a script that inserts a new row in the table `first_table` (database `hbtn_0c_0`) in your MySQL server.
@@ -107,7 +159,23 @@ Write a script that inserts a new row in the table `first_table` (database `hbtn
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 7-insert_value.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 6-list_values.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+id	name
+89	Best School
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 7-insert_value.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 7-insert_value.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 6-list_values.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+id	name
+89	Best School
+89	Best School
+89	Best School
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [8. Count 89](./8-count_89.sql)
 Write a script that displays the number of records with `id = 89` in the table `first_table` of the database `hbtn_0c_0` in your MySQL server.
