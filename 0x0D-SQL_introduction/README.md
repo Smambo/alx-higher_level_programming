@@ -23,7 +23,19 @@ Write a script that creates the database `hbtn_0c_0` in your MySQL server.
 * You are not allowed to use the `SELECT` or `SHOW` statements
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Database
+hbtn_0c_0
+information_schema
+mysql
+performance_schema
+sys
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [2. Delete a database](./2-remove_database.sql)
 Write a script that deletes the database `hbtn_0c_0` in your MySQL server.
@@ -31,7 +43,24 @@ Write a script that deletes the database `hbtn_0c_0` in your MySQL server.
 * You are not allowed to use the `SELECT` or `SHOW` statements
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Database
+hbtn_0c_0
+information_schema
+mysql
+performance_schema
+sys
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 2-remove_database.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction# cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Database
+information_schema
+mysql
+performance_schema
+sys
+root@51d49543472e:/alx-higher_level_programming/0x0D-SQL_introduction#
 ```
 ### [3. List tables](./3-list_tables.sql)
 Write a script that lists all the tables of a database in your MySQL server.
