@@ -3,6 +3,7 @@
 
 ### What is higher-level programming?
 "High-level language" refers to the higher level of [abstraction](https://en.wikipedia.org/wiki/Abstraction_(computer_science)) from [machine language](https://en.wikipedia.org/wiki/Machine_code). In contrast to low-level programming languages, they may use natural language elements, be easier to use or may even automate significant areas of computing systems like memory management, making the developing process simpler and more understandable.
+![Programming language chart]()
 
 ### Contents
 
@@ -20,3 +21,4 @@
 12. [0x0B-python-input_output](./0x0B-python-input_output)
 13. [0x0C-python-almost_a_circle](./0x0C-python-almost_a_circle)
 14. [0x0D-SQL_introduction](./0x0D-SQL_introduction)
+15. [0x0E-SQL_more_queries](./0x0E-SQL_more_queries)
