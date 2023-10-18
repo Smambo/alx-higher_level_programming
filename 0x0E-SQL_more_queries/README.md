@@ -242,7 +242,29 @@ Write a script that lists all shows contained in `hbtn_0d_tvshows` that have at 
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 10-genre_id_by_show.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+title	genre_id
+Breaking Bad	1
+Breaking Bad	6
+Breaking Bad	7
+Breaking Bad	8
+Dexter	1
+Dexter	2
+Dexter	6
+Dexter	7
+Dexter	8
+Game of Thrones	1
+Game of Thrones	3
+Game of Thrones	4
+House	1
+House	2
+New Girl	5
+Silicon Valley	5
+The Big Bang Theory	5
+The Last Man on Earth	1
+The Last Man on Earth	5
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [11.Genre ID for all shows](./11-genre_id_all_shows.sql)
@@ -254,7 +276,31 @@ Write a script that lists all shows contained in the database `hbtn_0d_tvshows`.
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 11-genre_id_all_shows.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+title	genre_id
+Better Call Saul	NULL
+Breaking Bad	1
+Breaking Bad	6
+Breaking Bad	7
+Breaking Bad	8
+Dexter	1
+Dexter	2
+Dexter	6
+Dexter	7
+Dexter	8
+Game of Thrones	1
+Game of Thrones	3
+Game of Thrones	4
+Homeland	NULL
+House	1
+House	2
+New Girl	5
+Silicon Valley	5
+The Big Bang Theory	5
+The Last Man on Earth	1
+The Last Man on Earth	5
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [12.No genre](./12-no_genre.sql)
@@ -265,7 +311,12 @@ Write a script that lists all shows contained in `hbtn_0d_tvshows` without a gen
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 12-no_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+title	genre_id
+Better Call Saul	NULL
+Homeland	NULL
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [13.Number of shows by genre](./13-count_shows_by_genre.sql)
@@ -279,7 +330,18 @@ Write a script that lists all genres from `hbtn_0d_tvshows` and displays the num
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 13-count_shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+genre	number_shows
+Drama	5
+Comedy	4
+Mystery	2
+Crime	2
+Suspense	2
+Thriller	2
+Adventure	1
+Fantasy	1
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [14.My genres](./14-my_genres.sql)
