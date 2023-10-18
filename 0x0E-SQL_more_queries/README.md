@@ -377,5 +377,29 @@ Write a script that lists all shows, and all genres linked to that show, from th
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 16-shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+title	name
+Better Call Saul	NULL
+Breaking Bad	Crime
+Breaking Bad	Drama
+Breaking Bad	Suspense
+Breaking Bad	Thriller
+Dexter	Crime
+Dexter	Drama
+Dexter	Mystery
+Dexter	Suspense
+Dexter	Thriller
+Game of Thrones	Adventure
+Game of Thrones	Drama
+Game of Thrones	Fantasy
+Homeland	NULL
+House	Drama
+House	Mystery
+New Girl	Comedy
+Silicon Valley	Comedy
+The Big Bang Theory	Comedy
+The Last Man on Earth	Comedy
+The Last Man on Earth	Drama
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
