@@ -35,7 +35,15 @@ Write a script that creates the MySQL server user `user_0d_1`.
 * If the user `user_0d_1` already exists, your script should not fail
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 1-create_user.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 0-privileges.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Grants for user_0d_1@localhost
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE, CREATE ROLE, DROP ROLE ON *.* TO `user_0d_1`@`localhost`
+GRANT APPLICATION_PASSWORD_ADMIN,AUDIT_ABORT_EXEMPT,AUDIT_ADMIN,AUTHENTICATION_POLICY_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTION_ADMIN,CLONE_ADMIN,CONNECTION_ADMIN,ENCRYPTION_KEY_ADMIN,FLUSH_OPTIMIZER_COSTS,FLUSH_STATUS,FLUSH_TABLES,FLUSH_USER_RESOURCES,GROUP_REPLICATION_ADMIN,GROUP_REPLICATION_STREAM,INNODB_REDO_LOG_ARCHIVE,INNODB_REDO_LOG_ENABLE,PASSWORDLESS_USER_ADMIN,PERSIST_RO_VARIABLES_ADMIN,REPLICATION_APPLIER,REPLICATION_SLAVE_ADMIN,RESOURCE_GROUP_ADMIN,RESOURCE_GROUP_USER,ROLE_ADMIN,SERVICE_CONNECTION_ADMIN,SESSION_VARIABLES_ADMIN,SET_USER_ID,SHOW_ROUTINE,SYSTEM_USER,SYSTEM_VARIABLES_ADMIN,TABLE_ENCRYPTION_ADMIN,XA_RECOVER_ADMIN ON *.* TO `user_0d_1`@`localhost`
+ERROR 1141 (42000) at line 4: There is no such grant defined for user 'user_0d_2' on host 'localhost'
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [2.Read user](./2-create_read_user.sql)
@@ -46,7 +54,17 @@ Write a script that creates the database `hbtn_0d_2` and the user `user_0d_2`.
 * If the user `user_0d_2` already exists, your script should not fail
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 2-create_read_user.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 0-privileges.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Grants for user_0d_1@localhost
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE, CREATE ROLE, DROP ROLE ON *.* TO `user_0d_1`@`localhost`
+GRANT APPLICATION_PASSWORD_ADMIN,AUDIT_ABORT_EXEMPT,AUDIT_ADMIN,AUTHENTICATION_POLICY_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTION_ADMIN,CLONE_ADMIN,CONNECTION_ADMIN,ENCRYPTION_KEY_ADMIN,FLUSH_OPTIMIZER_COSTS,FLUSH_STATUS,FLUSH_TABLES,FLUSH_USER_RESOURCES,GROUP_REPLICATION_ADMIN,GROUP_REPLICATION_STREAM,INNODB_REDO_LOG_ARCHIVE,INNODB_REDO_LOG_ENABLE,PASSWORDLESS_USER_ADMIN,PERSIST_RO_VARIABLES_ADMIN,REPLICATION_APPLIER,REPLICATION_SLAVE_ADMIN,RESOURCE_GROUP_ADMIN,RESOURCE_GROUP_USER,ROLE_ADMIN,SERVICE_CONNECTION_ADMIN,SESSION_VARIABLES_ADMIN,SET_USER_ID,SHOW_ROUTINE,SYSTEM_USER,SYSTEM_VARIABLES_ADMIN,TABLE_ENCRYPTION_ADMIN,XA_RECOVER_ADMIN ON *.* TO `user_0d_1`@`localhost`
+Grants for user_0d_2@localhost
+GRANT USAGE ON *.* TO `user_0d_2`@`localhost`
+GRANT SELECT ON `hbtn_0d_2`.* TO `user_0d_2`@`localhost`
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [3.Always a name](./3-force_name.sql)
@@ -58,7 +76,22 @@ Write a script that creates the table `force_name` on your MySQL server.
 * If the table `force_name` already exists, your script should not fail
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 3-force_name.sql | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO force_name (id, name) VALUES (89, "Best School");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM force_name;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id	name
+89	Best School
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO force_name (id) VALUES (333);' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+ERROR 1364 (HY000) at line 1: Field 'name' doesn't have a default value
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM force_name;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id	name
+89	Best School
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [4.ID can't be null](./4-never_empty.sql)
@@ -70,7 +103,22 @@ Write a script that creates the table `id_not_null` on your MySQL server.
 * If the table `id_not_null` already exists, your script should not fail
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 4-never_empty.sql | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO id_not_null (id, name) VALUES (89, "Best School");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM id_not_null;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id	name
+89	Best School
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO id_not_null (name) VALUES ("Best");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM id_not_null;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id	name
+89	Best School
+1	Best
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [5.Unique ID](./5-unique_id.sql)
@@ -82,7 +130,22 @@ Write a script that creates the table `unique_id` on your MySQL server.
 * If the table `unique_id` already exists, your script should not fail
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 5-unique_id.sql | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO unique_id (id, name) VALUES (89, "Best School");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM unique_id;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id	name
+89	Best School
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO unique_id (id, name) VALUES (89, "Best");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+ERROR 1062 (23000) at line 1: Duplicate entry '89' for key 'unique_id.id'
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM unique_id;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id	name
+89	Best School
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [6.States table](./6-states.sql)
@@ -94,7 +157,17 @@ Write a script that creates the database `hbtn_0d_usa` and the table `states` (i
 * If the table `states` already exists, your script should not fail
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 6-states.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM states;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id	name
+1	California
+2	Arizona
+3	Texas
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [7.Cities table](./7-cities.sql)
@@ -107,7 +180,22 @@ Write a script that creates the database `hbtn_0d_usa` and the table `cities` (i
 * If the table `cities` already exists, your script should not fail
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 7-cities.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO cities (state_id, name) VALUES (1, "San Francisco");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM cities;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id	state_id	name
+1	1	San Francisco
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'INSERT INTO cities (state_id, name) VALUES (10, "Paris");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+ERROR 1452 (23000) at line 1: Cannot add or update a child row: a foreign key constraint fails (`hbtn_0d_usa`.`cities`, CONSTRAINT `cities_ibfk_1` FOREIGN KEY (`state_id`) REFERENCES `states` (`id`))
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM cities;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id	state_id	name
+1	1	San Francisco
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [8.Cities of California](./8-cities_of_california_subquery.sql)
@@ -118,7 +206,21 @@ Write a script that lists all the cities of California that can be found in the 
 * The database name will be passed as an argument of the `mysql` command
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM states;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id	name
+1	California
+2	Arizona
+3	Texas
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo 'SELECT * FROM cities;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id	state_id	name
+1	1	San Francisco
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 8-cities_of_california_subquery.sql | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id	name
+1	San Francisco
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# 
 ```
 
 ### [9.Cities by States](./9-cities_by_state_join.sql)
