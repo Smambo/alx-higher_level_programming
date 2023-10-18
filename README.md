@@ -3,7 +3,9 @@
 
 ### What is higher-level programming?
 "High-level language" refers to the higher level of [abstraction](https://en.wikipedia.org/wiki/Abstraction_(computer_science)) from [machine language](https://en.wikipedia.org/wiki/Machine_code). In contrast to low-level programming languages, they may use natural language elements, be easier to use or may even automate significant areas of computing systems like memory management, making the developing process simpler and more understandable.
-![Programming language chart]()
+
+![Programming language diagram](https://github.com/Smambo/alx-higher_level_programming/assets/113464914/1af6fbf1-58db-454f-84bb-fa4d131264fe)
+
 
 ### Contents
 
