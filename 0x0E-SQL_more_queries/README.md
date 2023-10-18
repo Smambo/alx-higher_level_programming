@@ -11,7 +11,21 @@ Storing data in your application (in memory) has the obvious shortcoming that, w
 Write a script that lists all privileges of the MySQL users `user_0d_1` and `user_0d_2` on your server (in `localhost`).
 
 ```
-
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 0-privileges.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+ERROR 1141 (42000) at line 3: There is no such grant defined for user 'user_0d_1' on host 'localhost'
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo "CREATE USER 'user_0d_1'@'localhost';" | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# echo "GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';" | mysql -hlocalhost -uroot -p
+Enter password: 
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries# cat 0-privileges.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Grants for user_0d_1@localhost
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE, CREATE ROLE, DROP ROLE ON *.* TO `user_0d_1`@`localhost`
+GRANT APPLICATION_PASSWORD_ADMIN,AUDIT_ABORT_EXEMPT,AUDIT_ADMIN,AUTHENTICATION_POLICY_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTION_ADMIN,CLONE_ADMIN,CONNECTION_ADMIN,ENCRYPTION_KEY_ADMIN,FLUSH_OPTIMIZER_COSTS,FLUSH_STATUS,FLUSH_TABLES,FLUSH_USER_RESOURCES,GROUP_REPLICATION_ADMIN,GROUP_REPLICATION_STREAM,INNODB_REDO_LOG_ARCHIVE,INNODB_REDO_LOG_ENABLE,PASSWORDLESS_USER_ADMIN,PERSIST_RO_VARIABLES_ADMIN,REPLICATION_APPLIER,REPLICATION_SLAVE_ADMIN,RESOURCE_GROUP_ADMIN,RESOURCE_GROUP_USER,ROLE_ADMIN,SERVICE_CONNECTION_ADMIN,SESSION_VARIABLES_ADMIN,SET_USER_ID,SHOW_ROUTINE,SYSTEM_USER,SYSTEM_VARIABLES_ADMIN,TABLE_ENCRYPTION_ADMIN,XA_RECOVER_ADMIN ON *.* TO `user_0d_1`@`localhost`
+ERROR 1141 (42000) at line 4: There is no such grant defined for user 'user_0d_2' on host 'localhost'
+root@51d49543472e:/alx-higher_level_programming/0x0E-SQL_more_queries#
 ```
 
 ### [1.Root user](./1-create_user.sql)
