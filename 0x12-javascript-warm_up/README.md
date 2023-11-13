@@ -168,6 +168,23 @@ Write a script that prints a square
 * You are not allowed to use `var`
 * You must use a loop (`while`, `for`, etc.)
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./8-square.js 
+Missing size
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./8-square.js Hello
+Missing size
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./8-square.js 2
+XX
+XX
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./8-square.js 4
+XXXX
+XXXX
+XXXX
+XXXX
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./8-square.js -3
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [9. Add](./9-add.js)
 Write a script that prints the addition of 2 integers
 
@@ -176,6 +193,18 @@ Write a script that prints the addition of 2 integers
 *    You have to define a function with this prototype: `function add(a, b)`
 *    You must use `console.log(...)` to print all output
 *    You are not allowed to use `var`
+
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./9-add.js 
+NaN
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./9-add.js 1
+NaN
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./9-add.js 1 7
+8
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./9-add.js 13 89
+102
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
 
 ### [10. Factorial](./10-factorial.js)
 Write a script that computes and prints a factorial
