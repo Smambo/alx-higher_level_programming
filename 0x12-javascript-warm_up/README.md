@@ -216,6 +216,18 @@ Write a script that computes and prints a factorial
 *    You must use `console.log(...)` to print all output
 *    You are not allowed to use `var`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./10-factorial.js 
+1
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./10-factorial.js 3
+6
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./10-factorial.js 89
+1.6507955160908452e+136
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./10-factorial.js 333
+Infinity
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [11. Second biggest!](./11-second_biggest.js)
 Write a script that searches the second biggest integer in the list of arguments.
 
