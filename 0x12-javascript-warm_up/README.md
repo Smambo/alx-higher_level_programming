@@ -30,6 +30,14 @@ Write a script that prints 3 lines:
 * You must use `console.log(...)` to print all output
 * You are not allowed to use `var`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./1-multi_languages.js 
+C is fun
+Python is cool
+JavaScript is amazing
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [2. Arguments](./2-arguments.js)
 Write a script that prints a message depending of the number of arguments passed:
 
@@ -38,6 +46,16 @@ Write a script that prints a message depending of the number of arguments passed
 * Otherwise, print “Arguments found”
 * You must use `console.log(...)` to print all output
 * You are not allowed to use `var`
+
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./2-arguments.js 
+No argument
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./2-arguments.js hello
+Argument found
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./2-arguments.js hello there
+Arguments found
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
 
 Reference: [process.argv](https://nodejs.org/api/process.html#process_process_argv)
 ### [3. Value of my argument](./3-value_argument.js)
@@ -48,11 +66,29 @@ Write a script that prints the first argument passed to it:
 * You are not allowed to use `var`
 * You are not allowed to use `length`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./3-value_argument.js 
+No argument
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./3-value_argument.js Hello
+Hello
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [4. Create a sentence](./4-concat.js)
 Write a script that prints two arguments passed to it, in the following format: “ is ”
 
 * You must use `console.log(...)` to print all output
 * You are not allowed to use `var`
+
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./4-concat.js c cool
+c is cool
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./4-concat.js c
+c is undefined
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./4-concat.js
+undefined is undefined
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
 
 ### [5. An Integer](./5-to_integer.js)
 Write a script that prints `My number: <first argument converted in integer>` if the first argument can be converted to an integer:
