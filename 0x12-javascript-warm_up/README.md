@@ -98,6 +98,18 @@ Write a script that prints `My number: <first argument converted in integer>` if
 * You are not allowed to use `var`
 * You are not allowed to use `try/catch`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./5-to_integer.js 89
+My number: 89
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./5-to_integer.js "89"
+My number: 89
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./5-to_integer.js 89.89
+My number: 89
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./5-to_integer.js Hello
+Not a number
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [6. Loop to languages](./6-multi_languages_loop.js)
 Write a script that prints 3 lines: (like `1-multi_languages.js`) but by using an array of string and a loop
 
@@ -110,6 +122,14 @@ Write a script that prints 3 lines: (like `1-multi_languages.js`) but by using a
 * You can use only one `console.log`
 * You must use a loop (`while`, `for`, etc.)
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./6-multi_languages_loop.js 
+C is fun
+Python is cool
+JavaScript is amazing
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [7. I love C](./7-multi_c.js)
 Write a script that prints `x` times “C is fun”
 
@@ -119,6 +139,24 @@ Write a script that prints `x` times “C is fun”
 * You are not allowed to use `var`
 * You can use only two `console.log`
 * You must use a loop (`while`, `for`, etc.)
+
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./7-multi_c.js 
+Missing number of occurences
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./7-multi_c.js 2
+C is fun
+C is fun
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./7-multi_c.js 4
+C is fun
+C is fun
+C is fun
+C is fun
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./7-multi_c.js 3
+C is fun
+C is fun
+C is fun
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
 
 ### [8. Square](./8-square.js)
 Write a script that prints a square
