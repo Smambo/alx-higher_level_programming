@@ -3,7 +3,8 @@
 ## About:
 JavaScript is a lightweight interpreted programming language. While it is mots well-known as the scripting language for web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation, and source-code recovery (JavaScript functions store their source text and can be retrieved through `toString()`.
 
-![]()
+![image](https://github.com/Smambo/alx-higher_level_programming/assets/113464914/dbd04dbb-d947-41dc-8f83-e1ff1ce8ef92)
+
 
 ## Tasks:
 ### [0. First constant, first print](./0-javascript_is_amazing.js)
