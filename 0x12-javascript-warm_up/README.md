@@ -237,6 +237,16 @@ Write a script that searches the second biggest integer in the list of arguments
 * You must use `console.log(...)` to print all output
 * You are not allowed to use `var`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./11-second_biggest.js 
+0
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./11-second_biggest.js 1
+0
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./11-second_biggest.js 2 6 3 5 0 -3
+5
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [12. Object](./12-object.js)
 Update this script to replace the value `12` with `89`:
 
@@ -267,3 +277,13 @@ Write a function that returns the addition of 2 integers.
 * The name of the function must be `add`
 * You are not allowed to use `var`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ cat 13-main.js 
+#!/usr/bin/node
+const add = require('./13-add').add;
+console.log(add(3, 5));
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./13-main.js 
+8
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ 
+
+```
