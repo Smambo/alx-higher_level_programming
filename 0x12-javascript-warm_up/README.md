@@ -14,6 +14,13 @@ Write a script that prints “JavaScript is amazing”:
 * You must use `console.log(...)` to print all output
 * You are not allowed to use `var`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./0-javascript_is_amazing.js 
+JavaScript is amazing
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$ semistandard ./0-javascript_is_amazing.js 
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x12-javascript-warm_up$
+```
+
 ### [1. 3 languages](./1-multi_languages.js)
 Write a script that prints 3 lines:
 
