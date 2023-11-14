@@ -116,6 +116,28 @@ Write a class `Rectangle` that defines a rectangle:
 * If `w` or `h` is equal to 0 or not a positive integer, create an empty object
 * Create an instance method called `print()` that prints the rectangle using the character `X`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ cat 3-main.js 
+#!/usr/bin/node
+const Rectangle = require('./3-rectangle');
+
+const r1 = new Rectangle(2, 3);
+r1.print();
+
+const r2 = new Rectangle(10, 5);
+r2.print();
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ ./3-main.js 
+XX
+XX
+XX
+XXXXXXXXXX
+XXXXXXXXXX
+XXXXXXXXXX
+XXXXXXXXXX
+XXXXXXXXXX
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$
+```
+
 ### [4. Rectangle #4](./4-rectangle.js)
 Write a class `Rectangle` that defines a rectangle:
 * You must use the `class` notation for defining your class
