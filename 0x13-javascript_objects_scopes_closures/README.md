@@ -67,6 +67,46 @@ Write a class `Rectangle` that defines a rectangle:
 * Initialize the instance attribute `height` with the value of `h`
 * If `w` or `h` is equal to 0 or not a positive integer, create an empty object
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ cat 2-main.js 
+#!/usr/bin/node
+const Rectangle = require('./2-rectangle');
+
+const r1 = new Rectangle(2, 3);
+console.log(r1);
+console.log(r1.width);
+console.log(r1.height);
+
+const r2 = new Rectangle(2, -3);
+console.log(r2);
+console.log(r2.width);
+console.log(r2.height);
+
+const r3 = new Rectangle(2);
+console.log(r3);
+console.log(r3.width);
+console.log(r3.height);
+
+const r4 = new Rectangle(2, 0);
+console.log(r4);
+console.log(r4.width);
+console.log(r4.height);
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ ./2-main.js 
+Rectangle { width: 2, height: 3 }
+2
+3
+Rectangle {}
+undefined
+undefined
+Rectangle {}
+undefined
+undefined
+Rectangle {}
+undefined
+undefined
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$
+```
+
 ### [3. Rectangle #3](./3-rectangle.js)
 Write a class `Rectangle` that defines a rectangle:
 * You must use the `class` notation for defining your class
