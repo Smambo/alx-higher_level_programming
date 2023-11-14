@@ -5,6 +5,20 @@
 Write an empty class `Rectangle` that defines a rectangle:
 * You must use the `class` notation for defining your class
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ cat 0-main.js
+#!/usr/bin/node
+const Rectangle = require('./0-rectangle');
+
+const r1 = new Rectangle();
+console.log(r1);
+console.log(r1.constructor);
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ ./0-main.js 
+Rectangle {}
+[class Rectangle]
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$
+```
+
 ### [1. Rectangle #1](./1-rectangle.js)
 Write a class `Rectangle` that defines a rectangle:
 * You must use the `class` notation for defining your class
