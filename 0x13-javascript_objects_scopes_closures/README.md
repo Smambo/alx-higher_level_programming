@@ -267,6 +267,19 @@ Write a function that returns the reversed version of a list:
 * Prototype: `exports.esrever = function (list)`
 * You are not allow to use the built-in method `reverse`
 
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ cat 8-main.js 
+#!/usr/bin/node
+const esrever = require('./8-esrever').esrever;
+
+console.log(esrever([1, 2, 3, 4, 5]));
+console.log(esrever(["School", 89, { id: 12 }, "String"]));
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ ./8-main.js 
+[ 5, 4, 3, 2, 1 ]
+[ 'String', { id: 12 }, 89, 'School' ]
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$
+```
+
 ### [9. Log me](./9-logme.js)
 Write a function that prints the number of arguments already printed and the new argument value. (see example below)
 * Prototype: `exports.logMe = function (item)`
@@ -293,4 +306,31 @@ Write a function that converts a number from base 10 to another base passed as a
 *    Prototype: `exports.converter = function (base)`
 *    You are not allowed to import any file
 *    You are not allowed to declare any new variable (`var`, `let`, etc..)
+
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ cat 10-main.js 
+#!/usr/bin/node
+const converter = require('./10-converter').converter;
+
+let myConverter = converter(10);
+
+console.log(myConverter(2));
+console.log(myConverter(12));
+console.log(myConverter(89));
+
+
+myConverter = converter(16);
+
+console.log(myConverter(2));
+console.log(myConverter(12));
+console.log(myConverter(89));
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$ ./10-main.js 
+2
+12
+89
+2
+c
+59
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x13-javascript_objects_scopes_closures$
+```
 
