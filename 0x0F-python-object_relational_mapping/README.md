@@ -2,7 +2,8 @@
 ## Follow me as I tackle tasks on Object-relational mapping (ORM) in Python
 ## About:
 An object-relational mapper (ORM) is a code library that automates the transfer of data stored in relational database tables into objects that are more commonly used in application code. ORMs provide a high-level abstraction upon a relational database that allows a developer to write Python code instead of SQL to create, read, update and delete data and schemas in their database.
-![]()
+![image](https://github.com/Smambo/alx-higher_level_programming/assets/113464914/8069a6aa-c972-43ba-bda6-91076384def2)
+
 
 ## Tasks:
 ### [0. Get all states](./0-select_states.py)
