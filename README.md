@@ -24,5 +24,6 @@
 13. [0x0C-python-almost_a_circle](./0x0C-python-almost_a_circle)
 14. [0x0D-SQL_introduction](./0x0D-SQL_introduction)
 15. [0x0E-SQL_more_queries](./0x0E-SQL_more_queries)
-16. [0x12-javascript-warm_up](./0x12-javascript-warm_up)
-17. [0x13-javascript_objects_scopes_closures](./0x13-javascript_objects_scopes_closures)
+16. [0x0F-python-object_relational_mapping](./0x0F-python-object_relational_mapping)
+17. [0x12-javascript-warm_up](./0x12-javascript-warm_up)
+18. [0x13-javascript_objects_scopes_closures](./0x13-javascript_objects_scopes_closures)
