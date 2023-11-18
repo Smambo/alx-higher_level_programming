@@ -237,6 +237,35 @@ Write a python file that contains the class definition of a `State` and an insta
 * Your script should connect to a MySQL server running on `localhost` at port `3306`
 * *WARNING:* all classes who inherit from `Base` *must* be imported before calling `Base.metadata.create_all(engine)`
 
+```
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 6-model_state.sql
+-- Create database hbtn_0e_6_usa
+CREATE DATABASE IF NOT EXISTS hbtn_0e_6_usa;
+USE hbtn_0e_6_usa;
+SHOW CREATE TABLE states;
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 6-model_state.sql | mysql -uroot -p
+Enter password: 
+ERROR 1146 (42S02) at line 4: Table 'hbtn_0e_6_usa.states' doesn't exist
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 6-model_state.py
+#!/usr/bin/python3
+"""Start link class to table in database 
+"""
+import sys
+from model_state import Base, State
+
+from sqlalchemy import (create_engine)
+
+if __name__ == "__main__":
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# ./6-model_state.py root root hbtn_0e_6_usa
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 6-model_state.sql | mysql -uroot -p
+Enter password: 
+Table	Create Table
+states	CREATE TABLE `states` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `name` varchar(128) NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping#
+```
+
 ### [7. All states via SQLAlchemy](./7-model_state_fetch_all.py)
 Write a script that lists all `State` objects from the database `hbtn_0e_6_usa`
 
@@ -246,6 +275,21 @@ Write a script that lists all `State` objects from the database `hbtn_0e_6_usa`
 *    Your script should connect to a MySQL server running on `localhost` at port `3306`
 *    Results must be sorted in ascending order by `states.id`
 *    Your code should not be executed when imported
+
+```
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 7-model_state_fetch_all.sql
+-- Insert states
+INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 7-model_state_fetch_all.sql | mysql -uroot -p hbtn_0e_6_usa
+Enter password: 
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# ./7-model_state_fetch_all.py root root hbtn_0e_6_usa
+1: California
+2: Arizona
+3: Texas
+4: New York
+5: Nevada
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping#
+```
 
 ### [8. First state](./8-model_state_fetch_first.py)
 Write a script that prints the first `State` object from the database `hbtn_0e_6_usa`
@@ -259,6 +303,12 @@ Write a script that prints the first `State` object from the database `hbtn_0e_6
 * If the table `states` is empty, print `Nothing` followed by a new line
 * Your code should not be executed when imported
 
+```
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# ./8-model_state_fetch_first.py root root hbtn_0e_6_usa
+1: California
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# 
+```
+
 ### [9. Contains 'a'](./9-model_state_filter_a.py)
 Write a script that lists all `State` objects that contain the letter `a` from the database `hbtn_0e_6_usa`
 
@@ -268,6 +318,16 @@ Write a script that lists all `State` objects that contain the letter `a` from t
 * Your script should connect to a MySQL server running on `localhost` at port `3306`
 * Results must be sorted in ascending order by `states.id`
 * Your code should not be executed when imported
+
+```
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# ./9-model_state_filter_a.py root root hbtn_0e_6_usa
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+1: California
+2: Arizona
+3: Texas
+5: Nevada
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping#
+```
 
 ### [10. Get a state](./10-model_state_my_get.py)
 Write a script that prints the `State` object with the `name` passed as argument from the database `hbtn_0e_6_usa`
