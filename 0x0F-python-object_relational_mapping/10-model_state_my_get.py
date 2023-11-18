@@ -22,6 +22,6 @@ if __name__ == "__main__":
     state = sesh.query(State).filter(State.name == sys.argv[4]).first()
     try:
         print("{}".format(state.id))
-    except:
+    except Exception:
         print("Not found")
     sesh.close()
