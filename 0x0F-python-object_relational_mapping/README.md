@@ -16,6 +16,16 @@ Write a script that lists all `states` from the database `hbtn_0e_0_usa`:
 * Your code should not be executed when imported
 
 ```
+(venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 0-select_states.sql
+-- Create states table in hbtn_0e_0_usa with some data
+CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;
+USE hbtn_0e_0_usa;
+CREATE TABLE IF NOT EXISTS states (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(256) NOT NULL,
+    PRIMARY KEY (id)
+);
+INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
 (venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# cat 0-select_states.sql | mysql -uroot -p
 Enter password: 
 (venv) root@35318dc49ca3:/alx-higher_level_programming/0x0F-python-object_relational_mapping# ./0-select_states.py root root hbtn_0e_0_usa
