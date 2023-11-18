@@ -21,8 +21,7 @@ def main(args):
     cur = db.cursor()
     cur.execute("SELECT c.name FROM cities\
             c JOIN states s ON s.id=c.state_id\
-            WHERE s.name=%s ORDER BY c.id", (args[4],)
-            )
+            WHERE s.name=%s ORDER BY c.id", (args[4],))
     states = cur.fetchall()
     print(", ".join(map(lambda x: "%s" % x, states)))
 
