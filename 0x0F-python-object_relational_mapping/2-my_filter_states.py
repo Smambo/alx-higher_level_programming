@@ -20,7 +20,10 @@ def main(args):
             db=args[3]
             )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC")
+    cur.execute(
+            "SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC"
+            .format(args[4])
+            )
     states = cur.fetchall()
     for state in states:
         if state[1] == args[4]:
