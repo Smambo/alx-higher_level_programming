@@ -7,7 +7,10 @@ import MySQLdb
 
 
 def main(args):
-    """."""
+    """
+    Script displays all values in database table
+    where name matches the argument.
+    """
     if len(args) != 4:
         raise Exception("3 arguments needed!")
     db = MySQLdb.connect(
