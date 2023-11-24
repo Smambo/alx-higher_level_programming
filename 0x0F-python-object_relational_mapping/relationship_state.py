@@ -16,4 +16,4 @@ class State(Base):
                           "City",
                           backref="state",
                           cascade="all, delete-orphan"
-                         )       
+                          )
