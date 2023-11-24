@@ -18,7 +18,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     sesh = Session()
-    city_list = sesh.query(City).ordey_by(City.id).all()
+    city_list = sesh.query(City).order_by(City.id).all()
     for city in city_list:
         print("{}: {} -> {}".format(city.id, city.name, city.state.name))
     sesh.close()
