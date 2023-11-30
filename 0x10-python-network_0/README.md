@@ -51,6 +51,11 @@ Write a Bash script that takes in a URL, sends a `GET` request to the URL, and d
 * Display only body of a `200` status code response
 * You have to use `curl`
 
+```
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0# ./1-body.sh 0.0.0.0:5000/route_1 ; echo ""
+Route 2
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0#
+```
 ### [2. cURL Method](./2-delete.sh)
 Write a Bash script that sends a `DELETE` request to the URL passed as the first argument and displays the body of the response
 
