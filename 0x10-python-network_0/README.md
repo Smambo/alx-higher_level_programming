@@ -61,10 +61,22 @@ Write a Bash script that sends a `DELETE` request to the URL passed as the first
 
 * You have to use `curl`
 
+```
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0# ./2-delete.sh 0.0.0.0:5000/route_3 ; echo ""
+I'm a DELETE request
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0#
+```
+
 ### [3. cURL only methods](./3-methods.sh)
 Write a Bash script that takes in a URL and displays all HTTP methods the server will accept.
 
 * You have to use `curl`
+
+```
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0# ./3-methods.sh 0.0.0.0:5000/route_4
+OPTIONS, HEAD, PUT
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0#
+```
 
 ### [4. cURL headers](./4.header.sh)
 Write a Bash script that takes in a URL as an argument, sends a `GET` request to the URL, and displays the body of the response
@@ -72,12 +84,25 @@ Write a Bash script that takes in a URL as an argument, sends a `GET` request to
 * A header variable `X-School-User-Id` must be sent with the value `98`
 * You have to use `curl`
 
+```
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0# ./4-header.sh 0.0.0.0:5000/route_5 ; echo ""
+Hello School!
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0#
+```
 ### [5. cURL POST parameters](./5-post_params.sh)
 Write a Bash script that takes in a URL, sends a `POST` request to the passed URL, and displays the body of the response
 
 * A variable `email` must be sent with the value `test@gmail.com`
 * A variable `subject` must be sent with the value `I will always be here for PLD`
 * You have to use `curl`
+
+```
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0# ./5-post_params.sh 0.0.0.0:5000/route_6 ; echo ""
+POST params:
+	email: test@gmail.com
+	subject: I will always be here for PLD
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0#
+```
 
 ### [6. Find a peak](./6-peak.py)
 **Technical interview preparation**:
