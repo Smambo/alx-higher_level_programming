@@ -39,6 +39,12 @@ Write a Bash script that takes in a URL, sends a request to that URL, and displa
 * The size must be displayed in bytes
 * You have to use `curl`
 
+```
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0# ./0-body_size.sh 0.0.0.0:5000
+10
+root@4653e508fb2e:/alx-higher_level_programming/0x10-python-network_0#
+```
+
 ### [1. cURL to the end](./1-body.sh)
 Write a Bash script that takes in a URL, sends a `GET` request to the URL, and displays the body of the response
 
