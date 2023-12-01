@@ -13,6 +13,16 @@ At the end of this project, you are expected to be able to explain to anyone, **
 ## Tasks:
 ### [0. What's my status? #0](./0-hbtn_status.py)<br>
 Write a Python script that fetches `https://alx-intranet.hbtn.io/status`<br>
+
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$ ./0-hbtn_status.py | cat -e
+Body response:$
+	- type: <class 'bytes'>$
+	- content: b'OK'$
+	- utf8 content: OK$
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$
+```
+
 ### [1. Response header value #0](./1-hbtn_header.py)<br>
 Write a Python script that takes in a URL, sends a request to the URL and displays the value of the `X-Request-Id` variable found in the header of the response.<br>
 ### [2. POST an email #0](./2-post_email.py)<br>
