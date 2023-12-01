@@ -20,6 +20,7 @@
 [0x08-python-more_classes](./0x08-python-more_classes)<br>
 [0x09-python-everything_is_object](./0x09-python-everything_is_object)<br>
 [0x10-python-network_0](./0x10-python-network_0)<br>
+[0x11-python-network_1](./0x11-python-network_1)<br>
 [0x0A-python-inheritance](./0x0A-python-inheritance)<br>
 [0x0B-python-input_output](./0x0B-python-input_output)<br>
 [0x0C-python-almost_a_circle](./0x0C-python-almost_a_circle)<br>
