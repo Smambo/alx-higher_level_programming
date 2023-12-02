@@ -71,6 +71,15 @@ smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$
 
 ### [5. Response header value #1](./5-hbtn_header.py)<br>
 Write a Python script that takes in a URL, sends a request to the URL and displays the value of the variable `X-Request-Id` in the response header<br>
+
+```
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$ ./5-hbtn_header.py https://alx-intranet.hbtn.io
+63a59fae-71bd-4765-9418-e078388c4821
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$ ./5-hbtn_header.py https://alx-intranet.hbtn.io
+10f7fc9f-512e-47a9-8b39-fffc01ebf711
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$ 
+```
+
 ### [6. POST an email #1](./6-post_email.py)<br>
 Write a Python script that takes in a URL and an email address, sends a `POST` request to the passed URL with the email as a parameter, and finally displays the body of the response<br>
 ### [7. Error code #1](./7-error_code.py)<br>
