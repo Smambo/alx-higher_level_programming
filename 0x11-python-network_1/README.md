@@ -91,6 +91,19 @@ root@ac05dbe003d0:/0x11#
 
 ### [7. Error code #1](./7-error_code.py)<br>
 Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response.<br>
+
+```
+root@ac05dbe003d0:/0x11# ./7-error_code.py http://0.0.0.0:5000
+Index
+root@ac05dbe003d0:/0x11# ./7-error_code.py http://0.0.0.0:5000/status_401
+Error code: 401
+root@ac05dbe003d0:/0x11# ./7-error_code.py http://0.0.0.0:5000/doesnt_exist
+Error code: 404
+root@ac05dbe003d0:/0x11# ./7-error_code.py http://0.0.0.0:5000/status_500
+Error code: 500
+root@ac05dbe003d0:/0x11#
+```
+
 ### [8. Search API](./8-json_api.py)<br>
 Write a Python script that takes in a letter and sends a `POST` request to `http://0.0.0.0:5000/search_user` with the letter as a parameter.<br>
 ### [9. My Github!](./10-my_github.py)<br>
