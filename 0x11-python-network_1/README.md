@@ -62,11 +62,11 @@ root@ac05dbe003d0:/0x11#
 Write a Python script that fetches `https://alx-intranet.hbtn.io/status`<br>
 
 ```
-root@ac05dbe003d0:/0x11# ./4-hbtn_status.py | cat -e
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$ ./4-hbtn_status.py | cat -e
 Body response:$
 	- type: <class 'str'>$
 	- content: OK$
-root@ac05dbe003d0:/0x11#
+smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$
 ```
 
 ### [5. Response header value #1](./5-hbtn_header.py)<br>
