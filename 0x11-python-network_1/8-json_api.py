@@ -15,8 +15,9 @@ if __name__ == "__main__":
     req = requests.post("http://0.0.0.0:5000/search_user", data={'q': q})
     try:
         if req.json():
-            print("[{}] {}".format(req.json().get('id'), req.json().get('name')))
+            print("[{}] {}".format(req.json().get('id'),
+                                   req.json().get('name')))
         else:
             print("No result")
-    except:
+    except Exception:
         print("Not a valid JSON")
