@@ -82,6 +82,13 @@ smambo@lenovo-ubuntu:~/alx-higher_level_programming/0x11-python-network_1$
 
 ### [6. POST an email #1](./6-post_email.py)<br>
 Write a Python script that takes in a URL and an email address, sends a `POST` request to the passed URL with the email as a parameter, and finally displays the body of the response<br>
+
+```
+root@ac05dbe003d0:/0x11# ./6-post_email.py http://0.0.0.0:5000/post_email hr@holbertonschool.com
+Your email is: hr@holbertonschool.com
+root@ac05dbe003d0:/0x11#
+```
+
 ### [7. Error code #1](./7-error_code.py)<br>
 Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response.<br>
 ### [8. Search API](./8-json_api.py)<br>
