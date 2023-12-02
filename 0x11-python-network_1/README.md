@@ -45,8 +45,30 @@ root@ac05dbe003d0:/0x11#
 
 ### [3. Error code #0](./3-error_code.py)<br>
 Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response (decoded in `utf-8`).<br>
+
+```
+root@ac05dbe003d0:/0x11# ./3-error_code.py http://0.0.0.0:5000
+Index
+root@ac05dbe003d0:/0x11# ./3-error_code.py http://0.0.0.0:5000/status_401
+Error code: 401
+root@ac05dbe003d0:/0x11# ./3-error_code.py http://0.0.0.0:5000/doesnt_exist
+Error code: 404
+root@ac05dbe003d0:/0x11# ./3-error_code.py http://0.0.0.0:5000/status_500
+Error code: 500
+root@ac05dbe003d0:/0x11#
+```
+
 ### [4. What's my status? #1](./4-hbtn_status.py)<br>
 Write a Python script that fetches `https://alx-intranet.hbtn.io/status`<br>
+
+```
+root@ac05dbe003d0:/0x11# ./4-hbtn_status.py | cat -e
+Body response:$
+	- type: <class 'str'>$
+	- content: OK$
+root@ac05dbe003d0:/0x11#
+```
+
 ### [5. Response header value #1](./5-hbtn_header.py)<br>
 Write a Python script that takes in a URL, sends a request to the URL and displays the value of the variable `X-Request-Id` in the response header<br>
 ### [6. POST an email #1](./6-post_email.py)<br>
