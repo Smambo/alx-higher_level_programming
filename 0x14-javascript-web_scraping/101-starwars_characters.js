@@ -10,13 +10,13 @@ request(address, function (err, response, body) {
     const results = JSON.parse(body).characters;
     const promises = [];
 
-    for (let i of results) {
+    for (const i of results) {
       promises.push(new Promise(function (resolve, reject) {
         request(i, (e, r, b) => resolve(JSON.parse(b).name));
       }));
     }
     Promise.all(promises).then((a) => {
-      for (let i of a) {
+      for (const i of a) {
         console.log(i);
       }
     });
